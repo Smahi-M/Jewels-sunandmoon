@@ -133,7 +133,7 @@ export default function HeroScene() {
 
   return (
     <>
-      <section ref={ref} className="relative h-[300svh] motion-reduce:hidden">
+      <section ref={ref} data-hero className="relative h-[300svh] motion-reduce:hidden">
         <div
           style={CHAMPAGNE}
           className="sticky top-0 grid h-svh place-items-center overflow-hidden [--M:clamp(240px,min(66vw,40svh),400px)]"
@@ -227,7 +227,7 @@ export default function HeroScene() {
       </section>
 
       {/* Reduced motion: final state, static moon/sun duo above the logo. */}
-      <section
+      <section data-hero
         style={CHAMPAGNE}
         className="hidden min-h-svh flex-col items-center justify-center gap-10 px-4 py-16 [--M:clamp(180px,min(50vw,34svh),340px)] motion-reduce:flex"
       >

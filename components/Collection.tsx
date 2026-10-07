@@ -54,20 +54,12 @@ export default function Collection() {
                 <p className="mt-5 max-w-[460px] font-sans text-[15px] leading-[1.8] font-light text-[#5A5247]">
                   {p.description}
                 </p>
-                <dl className="mt-8 max-w-[460px] border-t border-[#D3CBBE]">
-                  {p.specs.map((s) => (
-                    <div key={s.label} className="flex items-baseline justify-between gap-6 border-b border-[#D3CBBE] py-4">
-                      <dt className="font-sans text-[10px] tracking-[.32em] text-[#8A7F70] uppercase">{s.label}</dt>
-                      <dd className="font-serif text-[20px] text-[#151311]">{s.value}</dd>
-                    </div>
-                  ))}
-                </dl>
                 {p.price !== null && (
-                  <p className="mt-8 font-serif text-[28px] text-[#151311]">{formatPrice(p.price)}</p>
+                  <p className="mt-6 font-serif text-[28px] text-[#151311]">{formatPrice(p.price)}</p>
                 )}
                 <Link
                   href={`?produit=${p.id}#commande`}
-                  className="mt-10 flex h-14 w-full items-center justify-center bg-[#0B0B0C] px-10 font-sans text-[11.5px] font-medium tracking-[.3em] text-[#EFEBE2] uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0B0B0C] md:w-fit"
+                  className="mt-8 flex h-14 w-full items-center justify-center bg-[#0B0B0C] px-10 font-sans text-[11.5px] font-medium tracking-[.3em] text-[#EFEBE2] uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0B0B0C] md:w-fit"
                 >
                   {p.cta}
                 </Link>

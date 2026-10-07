@@ -5,7 +5,6 @@ export type Product = {
   name: string;
   cta: string;
   description: string;
-  specs: { label: string; value: string }[];
   photos: { main: Photo; thumbs: [Photo, Photo] };
   /** Prix en DA. null = aucun prix affiché nulle part. */
   price: number | null;
@@ -25,10 +24,6 @@ export const products: Product[] = [
     cta: "Commander le collier",
     description:
       "Une lune argentée sertie de pierres bleues, un soleil doré pavé de zircons : deux pendentifs qui s'emboîtent pour n'en former qu'un. Portés ensemble ou séparément, ils accompagnent chaque lumière du jour.",
-    specs: [
-      { label: "Matière", value: "[À confirmer]" },
-      { label: "Longueur", value: "[À confirmer]" },
-    ],
     photos: {
       main: {
         src: "/images/collier/principale.jpg",
@@ -51,22 +46,18 @@ export const products: Product[] = [
     name: "Bracelet Lune & Soleil",
     cta: "Commander le bracelet",
     description:
-      "Au poignet, la lune argentée aux pierres bleues rencontre le soleil doré pavé de zircons. Deux breloques qui s'emboîtent, comme une promesse que l'on garde sur soi.",
-    specs: [
-      { label: "Matière", value: "[À confirmer]" },
-      { label: "Longueur", value: "[À confirmer]" },
-    ],
+      "Au poignet, la lune argentée aux pierres bleues rencontre le soleil doré pavé de zircons. Deux pièces qui s'emboîtent, comme une promesse que l'on garde sur soi.",
     photos: {
       main: {
         src: "/images/bracelet/principale.jpg",
-        alt: "Bracelet Lune & Soleil : breloques lune argentée et soleil doré emboîtées",
+        alt: "Bracelet Lune & Soleil : pièces lune argentée et soleil doré emboîtées",
         placeholder: "Photo du bracelet",
       },
       thumbs: [
         { src: "/images/bracelet/porte.jpg", alt: "Bracelet Lune & Soleil porté au poignet", placeholder: "Bracelet porté" },
         {
           src: "/images/bracelet/detail.jpg",
-          alt: "Détail des breloques lune et soleil du bracelet",
+          alt: "Détail des pièces lune et soleil du bracelet",
           placeholder: "Détail du bracelet",
         },
       ],
@@ -74,3 +65,44 @@ export const products: Product[] = [
     price: null,
   },
 ];
+
+export const order = {
+  eyebrow: "Commande",
+  title: { before: "Réserver", em: "votre pièce" },
+  intro: "Paiement à la livraison, à domicile ou en stop desk, dans 58 wilayas.",
+  productsLabel: "Vos pièces",
+  decrease: "Retirer une pièce",
+  increase: "Ajouter une pièce",
+  quantity: "Quantité",
+  fields: {
+    name: "Nom complet",
+    phone: "Téléphone",
+    phonePlaceholder: "05 00 00 00 00",
+    wilaya: "Wilaya",
+    wilayaPlaceholder: "Choisir la wilaya",
+    delivery: "Livraison",
+  },
+  modes: { domicile: "À domicile", bureau: "Stop desk" },
+  recap: {
+    title: "Récapitulatif",
+    delivery: "Livraison",
+    chooseWilaya: "Choisissez votre wilaya",
+    total: "Total",
+    priceNote: "Le prix vous sera confirmé par téléphone.",
+  },
+  submit: "Confirmer la commande",
+  sending: "Envoi en cours…",
+  success: "Commande reçue — nous vous appelons pour confirmer.",
+  failure: "La commande n'a pas pu être envoyée. Réessayez dans un instant.",
+  errors: {
+    products: "Choisissez au moins une pièce.",
+    name: "Indiquez votre nom complet.",
+    phone: "Numéro invalide : 05, 06 ou 07 suivi de 8 chiffres.",
+    wilaya: "Choisissez votre wilaya.",
+    mode: "Choisissez un mode de livraison.",
+  },
+};
+
+export const floatingCta = "Commander";
+
+export const footer = { brand: "Orléa", note: "Paiement à la livraison · 58 wilayas · © 2026" };
