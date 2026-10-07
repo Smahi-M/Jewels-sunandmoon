@@ -102,7 +102,7 @@ function Logo({ wrap, rule, tagline }: LogoMotion) {
         style={{ opacity: tagline }}
         className="font-serif text-[max(17px,calc(var(--logo)*0.26))] font-light text-[#1A1712] italic"
       >
-        Collection Soleil &amp; Lune
+        Collection Lune &amp; Soleil
       </motion.p>
     </motion.div>
   );

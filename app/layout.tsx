@@ -22,8 +22,8 @@ const pinyon = Pinyon_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Orléa Jewels — Collection Soleil & Lune",
-  description: "Orléa Jewels, collection Soleil & Lune.",
+  title: "Orléa Jewels — Collection Lune & Soleil",
+  description: "Orléa Jewels, collection Lune & Soleil.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
