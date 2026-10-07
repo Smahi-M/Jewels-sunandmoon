@@ -37,7 +37,7 @@ export default function Collection() {
                 <Shot
                   photo={p.photos.main}
                   sizes="(min-width: 1240px) 556px, (min-width: 768px) 45vw, 100vw"
-                  className="col-span-2 aspect-[4/5]"
+                  className="col-span-2 aspect-square"
                 />
                 {p.photos.thumbs.map((photo) => (
                   <Shot

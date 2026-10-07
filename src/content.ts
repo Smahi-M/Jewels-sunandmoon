@@ -27,15 +27,19 @@ export const products: Product[] = [
     photos: {
       main: {
         src: "/images/collier/principale.jpg",
-        alt: "Collier Lune & Soleil : pendentif lune argentée et pendentif soleil doré emboîtés",
+        alt: "Collier Lune & Soleil : le pendentif soleil doré et le pendentif lune argentée aux pierres bleues, emboîtés côte à côte sur leurs chaînes dorée et argentée",
         placeholder: "Photo du collier",
       },
       thumbs: [
-        { src: "/images/collier/porte.jpg", alt: "Collier Lune & Soleil porté", placeholder: "Collier porté" },
+        {
+          src: "/images/collier/porte.jpg",
+          alt: "Le pendentif soleil doré pavé de zircons, seul sur sa chaîne dorée",
+          placeholder: "Pendentif soleil",
+        },
         {
           src: "/images/collier/detail.jpg",
-          alt: "Détail des pierres bleues de la lune et du pavé de zircons du soleil",
-          placeholder: "Détail du collier",
+          alt: "Le pendentif lune argentée sertie de pierres bleues et de zircons, seul sur sa chaîne argentée",
+          placeholder: "Pendentif lune",
         },
       ],
     },
@@ -50,14 +54,18 @@ export const products: Product[] = [
     photos: {
       main: {
         src: "/images/bracelet/principale.jpg",
-        alt: "Bracelet Lune & Soleil : pièces lune argentée et soleil doré emboîtées",
+        alt: "Bracelet Lune & Soleil : une chaîne argentée et une chaîne dorée, réunies par la lune aux pierres bleues et le soleil pavé de zircons emboîtés",
         placeholder: "Photo du bracelet",
       },
       thumbs: [
-        { src: "/images/bracelet/porte.jpg", alt: "Bracelet Lune & Soleil porté au poignet", placeholder: "Bracelet porté" },
+        {
+          src: "/images/bracelet/porte.jpg",
+          alt: "Le bracelet Lune & Soleil porté au poignet, sous une manche en maille crème",
+          placeholder: "Bracelet porté",
+        },
         {
           src: "/images/bracelet/detail.jpg",
-          alt: "Détail des pièces lune et soleil du bracelet",
+          alt: "Gros plan sur la lune aux pierres bleues et le soleil doré pavé de zircons du bracelet",
           placeholder: "Détail du bracelet",
         },
       ],
