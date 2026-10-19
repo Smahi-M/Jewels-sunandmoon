@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { floatingCta } from "@/src/content";
 
-// Visible between the end of the hero and the order section.
+// Visible between the end of the hero and the order section, hidden while a product's own CTA is on screen.
 export default function FloatingCta() {
   const [show, setShow] = useState(false);
 
@@ -13,7 +13,7 @@ export default function FloatingCta() {
       entries.forEach((e) => seen.set(e.target, e.isIntersecting));
       setShow(![...seen.values()].some(Boolean));
     });
-    document.querySelectorAll("[data-hero], #commande").forEach((el) => io.observe(el));
+    document.querySelectorAll("[data-hero], #commande, [data-product-cta]").forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
 

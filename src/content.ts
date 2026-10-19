@@ -43,7 +43,7 @@ export const products: Product[] = [
         },
       ],
     },
-    price: null,
+    price: 4900,
   },
   {
     id: "bracelet",
@@ -70,7 +70,7 @@ export const products: Product[] = [
         },
       ],
     },
-    price: null,
+    price: 3900,
   },
 ];
 

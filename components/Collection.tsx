@@ -59,6 +59,7 @@ export default function Collection() {
                 )}
                 <Link
                   href={`?produit=${p.id}#commande`}
+                  data-product-cta
                   className="mt-8 flex h-14 w-full items-center justify-center bg-[#0B0B0C] px-10 font-sans text-[11.5px] font-medium tracking-[.3em] text-[#EFEBE2] uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0B0B0C] md:w-fit"
                 >
                   {p.cta}
