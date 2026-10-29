@@ -243,7 +243,7 @@ export default function OrderForm({ thumbs }: { thumbs: Record<Product["id"], st
       <button
         type="submit"
         disabled={pending}
-        className="h-[58px] w-full rounded-none bg-[#EDE6DA] font-sans text-[11.5px] font-medium tracking-[.32em] text-[#0B0B0C] uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9AE78] disabled:opacity-60"
+        className="h-[58px] w-full rounded-none bg-[#EDE6DA] font-sans text-[11.5px] font-medium tracking-[.32em] text-[#0B0B0C] uppercase enabled:hover:brightness-105 motion-safe:transition-[transform,filter] motion-safe:duration-200 motion-safe:enabled:hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9AE78] disabled:opacity-60"
       >
         {pending ? t.sending : t.submit}
       </button>
