@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orléa Jewels — Collection Lune & Soleil
 
-## Getting Started
+Landing page e-commerce pour une marque de bijoux, pensée pour la vente en paiement à la livraison (COD) en Algérie.
 
-First, run the development server:
+**Site en ligne :** https://orlea-demo.vercel.app
+
+<p>
+  <img src="docs/hero.jpg" alt="Écran d'accueil : la lune et le soleil emboîtés, moitié nuit, moitié jour" width="250">
+  <img src="docs/collection.jpg" alt="Fiche produit du collier Lune & Soleil" width="250">
+  <img src="docs/commande.jpg" alt="Formulaire de commande avec wilaya et mode de livraison" width="250">
+</p>
+
+## Fonctionnalités
+
+- **Hero animé** : la lune et le soleil s'ouvrent au défilement, sur fond nuit / jour avec des étoiles scintillantes.
+- **Collection** : deux produits (collier et bracelet) avec photo principale, photos de détail et prix en DA.
+- **Commande COD** : formulaire nom, téléphone, wilaya (les 58), livraison à domicile ou au bureau, quantités par produit, frais de livraison et total calculés en direct.
+- **Validation côté serveur** (Server Action) et confirmation par toast.
+- **Bouton de commande flottant** qui mène au formulaire.
+- Mobile-first, animations sur `transform` / `opacity` ; les animations d'ambiance sont coupées si `prefers-reduced-motion`.
+
+> Les commandes sont validées puis journalisées côté serveur. L'envoi vers Google Sheets n'est pas encore branché (voir `app/actions.ts`).
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Server Components, Server Actions)
+- React 19 + TypeScript
+- Tailwind CSS 4 + shadcn/ui (Base UI)
+- [Motion](https://motion.dev) pour les animations
+- [Sonner](https://sonner.emilkowal.ski) pour les toasts
+- Playwright pour les captures (`scripts/screenshots.mjs`)
+- Déploiement sur Vercel
+
+## Lancer en local
+
+Prérequis : Node.js 20 ou plus.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build de production :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/            page, layout, Server Action de commande
+components/     Hero, Collection, formulaire de commande, CTA flottant
+src/content.ts  textes, produits et prix
+src/data/       wilayas et frais de livraison
+src/order.ts    validation et calcul des totaux
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Auteur
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Mahfoud — SM_code.dev

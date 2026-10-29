@@ -43,3 +43,9 @@ next-env.d.ts
 .vercel
 
 _screenshots
+
+# notes internes / references (hors depot public)
+.claude/
+CLAUDE.md
+AGENTS.md
+_reference/
